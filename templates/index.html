@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <table class="table table-striped-columns table-hover mx-auto w-75">
+        <thead class="table-dark">
+            <tr>
+                <td>Name</td>
+                <td>Positon</td>
+                <td>Team</td>
+                <td>Bye Week</td>
+                <td>Drafted</td>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for player in active_players %}
+            <tr>
+                <td>{{player['Name']}}</td>
+                <td>{{player['Position']}}</td>
+                <td>{{player['Team']}}</td>
+                <td>{{player['ByeWeek']}}</td>
+                <td>False</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
